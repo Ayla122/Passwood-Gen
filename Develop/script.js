@@ -1,3 +1,7 @@
+var specialCharacters = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "=", "+"]
+var lowerCase = ["a", "b", "c", "d", "e", "f", "g", ""]
+
+
 // Assignment code here
 
 
