@@ -6,6 +6,15 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 // Assignment code here
 
+function generatePassword() {
+    enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
+    if (!enter) {
+        alert("this needs a value");
+    } }enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
+    if (enter < 8 || enter > 128) {
+        enter = parseInt(prompt("You must choose between 8 and 128"));
+    }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
