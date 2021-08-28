@@ -4,4 +4,6 @@ This week’s Challenge requires creating an application that an employee can us
  
 ## images
 
+main image
+
 <img src="https://github.com/Ayla122/Passwood-Gen/blob/main/Develop/Images/1.png"/>
