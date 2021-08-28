@@ -12,8 +12,6 @@ function generatePassword() {
     if (!enter) {
         alert("this needs a value");
     }
-
-    //enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
     if (enter < 8 || enter > 128) {
         enter = parseInt(prompt("You must choose between 8 and 128"));
     } else {
@@ -30,7 +28,6 @@ function generatePassword() {
                 //generate a random number 
                 var randomIndex = Math.floor(Math.random() * numbers.length);
                 var randomNumber = numbers[randomIndex];
-                //console.log(randomNumber);
                 listofCharacters.push(randomNumber);
             }
 
@@ -38,16 +35,13 @@ function generatePassword() {
                 //generate a random number 
                 var randomIndex = Math.floor(Math.random() * specialCharacters.length);
                 var randomCharacter = specialCharacters[randomIndex];
-                //console.log(randomCharacter);
                 listofCharacters.push(randomCharacter);
-
 
             }
             if (confirmLowercase === true) {
                 //generate a random number 
                 var randomIndex = Math.floor(Math.random() * lowerCase.length);
                 var randomlowerCase = lowerCase[randomIndex];
-                //console.log(randomlowerCase);
                 listofCharacters.push(randomlowerCase);
             }
 
@@ -55,29 +49,19 @@ function generatePassword() {
                 //generate a random number 
                 var randomIndex = Math.floor(Math.random() * upperCase.length);
                 var randomupperCase = upperCase[randomIndex];
-                //console.log(randomupperCase);
                 listofCharacters.push(randomupperCase);
             }
-            //console.log("listofCharacters", listofCharacters);
-
-      
         } // End of Loop 
     }
-    //console.log("Sliced version", listofCharacters.slice(0, enter).join(''));
+    
     return listofCharacters.slice(0, enter).join('');
 } // End of Function 
-
-
-
 
 // Write password to the #password input
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-
     passwordText.value = password;
-
-
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
